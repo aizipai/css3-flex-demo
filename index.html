@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flex-demo</title>
+	<link rel="stylesheet" type="text/css" href="./build/css/flex.css">
+</head>
+<body>
+	<div class="mainbody">
+		<div class="header clearfix">
+			<div class="m-logo">
+				Flex-demo
+			</div>
+			<div class="m-header-tit">
+				flex布局实例
+			</div>
+			<div class="m-git">
+				Github
+			</div>
+		</div>
+		<div class="m-content">
+			<div class="m-sidebar">
+				<ul>
+					<li><a href="#">123</a></li>
+					<li><a href="#">123</a></li>
+					<li><a href="#">123</a></li>
+					<li><a href="#">123</a></li>
+					<li><a href="#">123</a></li>
+					<li><a href="#">123</a></li>
+				</ul>
+			</div>
+			<div class="m-main">
+				<!-- flex-direction && flex-wrap 部分start -->
+				<div class="f-direction">
+					<div class="box-tit">
+						<span class="main">flex-direction & flex-wrap</span>
+						<div class="">
+							<button class="sub" data-flex='flex-direction' data-flex_value='row'>row</button>
+							<button class="sub" data-flex='flex-direction' data-flex_value='row-reverse'>row-reverse</button>
+							<button class="sub" data-flex='flex-direction' data-flex_value='column'>	column</button>
+							<button class="sub" data-flex='flex-direction' data-flex_value='column-reverse'>column-reverse</button>
+							<button class="sub" data-flex='flex-wrap' data-flex_value='nowrap'>nowrap</button>
+							<button class="sub" data-flex='flex-wrap' data-flex_value='wrap'>wrap</button>
+							<button class="sub" data-flex='flex-wrap' data-flex_value='wrap-reverse'>wrap-reverse</button>
+						</div>
+					</div>
+					<div class="box-wrap flex-direction">
+						<div class="item">1</div>
+						<div class="item">2</div>
+						<div class="item">3</div>
+						<div class="item">4</div>
+						<div class="item">5</div>
+						<div class="item">6</div>
+						<div class="item">7</div>
+						<div class="item">8</div>
+						<div class="item">9</div>
+						<div class="item">10</div>
+					</div>
+				</div>
+				<!-- flex-direction && flex-wrap 部分end -->
+				<!-- justify-content 部分satrt-->
+				<div class="f-justify-content">
+					<div class="box-tit">
+						<span class="main">justify-content</span>
+						<div class="">
+							<button class="sub" data-flex='justify-content' data-flex_value='flex-start'>flex-start</button>
+							<button class="sub" data-flex='justify-content' data-flex_value='flex-end'>flex-end</button>
+							<button class="sub" data-flex='justify-content' data-flex_value='center'>center</button>
+							<button class="sub" data-flex='justify-content' data-flex_value='space-between'>space-between</button>
+							<button class="sub" data-flex='justify-content' data-flex_value='space-around'>space-around</button>
+						</div>
+					</div>
+					<div class="box-wrap justify-content">
+						<div class="item">1</div>
+						<div class="item">2</div>
+						<div class="item">3</div>
+						<div class="item">4</div>
+						<div class="item">5</div>
+					</div>
+				</div>
+				<!-- justify-content 部分end-->
+				<!-- justify-items 部分start-->
+				<div class="f-align-items">
+					<div class="box-tit">
+						<span class="main">justify-content</span>
+						<div class="">
+							<button class="sub" data-flex='align-items' data-flex_value='flex-start'>flex-start</button>
+							<button class="sub" data-flex='align-items' data-flex_value='flex-end'>flex-end</button>
+							<button class="sub" data-flex='align-items' data-flex_value='center'>center</button>
+							<button class="sub" data-flex='align-items' data-flex_value='baseline'>baseline</button>
+							<button class="sub" data-flex='align-items' data-flex_value='stretch'>stretch</button>
+						</div>
+					</div>
+					<div class="box-wrap align-items">
+						<div class="item h150">1</div>
+						<div class="item">2</div>
+						<div class="item h170">3</div>
+						<div class="item">4</div>
+						<div class="item">5</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			
+		</div>
+	</div>
+	<script type="text/javascript" src='node_modules/zepto/dist/zepto.js'></script>
+	<script type="text/javascript">
+		
+		$('button').on('click',function(){
+			var $this = $(this)
+
+			var style = $this.attr('data-flex')
+			var $target = $this.closest('.box-tit').siblings('.box-wrap')
+			var style_value = $this.attr('data-flex_value')
+
+			console.log(style)
+			console.log(style_value)
+			console.log($target)
+
+			setStyle($target, style, style_value)
+		})
+
+
+		function setStyle($el, style, style_value){
+			$el.css(style, style_value)
+		}
+		
+
+
+
+
+	</script>
+</body>
+</html>

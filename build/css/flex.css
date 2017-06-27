@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+.mainbody .header {
+  padding: 0 50px;
+  height: 80px;
+  line-height: 80px;
+  box-shadow: 0 5px 5px #888;
+  zoom: 1;
+}
+.mainbody .header:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.mainbody .header .m-logo {
+  float: left;
+  width: 260px;
+  text-align: center;
+  font-size: 30px;
+}
+.mainbody .header .m-header-tit {
+  float: left;
+}
+.mainbody .header .m-git {
+  float: right;
+  color: #cce8fe;
+}
+.mainbody .m-content {
+  padding-top: 20px;
+}
+.mainbody .m-content .m-sidebar {
+  width: 200px;
+  text-align: center;
+  background-color: #f8f8f8;
+  float: left;
+}
+.mainbody .m-content .m-sidebar li a {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border-right: 2px solid #cce8fe;
+}
+.mainbody .m-content .m-sidebar li a:hover {
+  border-right: 2px solid transparent;
+  background-color: #fff;
+}
+.mainbody .m-content .m-main {
+  margin-left: 200px;
+  padding: 20px;
+}
+.mainbody .m-content .m-main .box-tit {
+  margin-bottom: 10px;
+}
+.mainbody .m-content .m-main .box-tit .main {
+  padding: 10px 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffc0cb;
+}
+.mainbody .m-content .m-main .box-tit .sub {
+  margin-left: 20px;
+  font-size: 20px;
+  color: #add8e6;
+  padding: 0 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.mainbody .m-content .m-main .box-wrap {
+  display: flex;
+  border: 1px solid #cce8fe;
+  width: 1000px;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.mainbody .m-content .m-main .box-wrap .item {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  margin: 10px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #cce8fe;
+}
+.mainbody .m-content .m-main.flex-direction {
+  flex-direction: rows;
+}
+.mainbody .m-content .m-main.align-items .h150 {
+  height: height50px;
+}
+.mainbody .m-content .m-main.align-items .h170 {
+  height: 170px;
+}

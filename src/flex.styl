@@ -1,0 +1,100 @@
+
+*
+	margin 0
+	padding 0
+	list-style none
+	text-decoration none
+
+// .clearfix
+    // zoom 1
+    // &:after
+    // 	display block
+    // 	content ''
+    // 	clear both
+$clearfix()
+	zoom 1
+	&:after
+		display block
+		content ''
+		clear both
+$item()
+	width 100px
+	height 100px
+	line-height 100px
+	margin 10px
+	text-align center
+	font-size 24px
+	font-weight 700
+	color #fff
+	background-color #CCE8FE		
+
+
+.mainbody
+	.header
+		padding 0 50px
+		height 80px
+		line-height 80px
+		box-shadow 0 5px 5px #888
+		$clearfix()
+		.m-logo
+			float left
+			width 260px
+			text-align center
+			font-size 30px
+		.m-header-tit
+			float left
+		.m-git
+			float right
+			color #CCE8FE
+	.m-content
+		padding-top 20px
+		.m-sidebar
+			width 200px
+			text-align center
+			background-color #f8f8f8
+			float left
+			li
+				a
+					display inline-block
+					width 100%
+					height 50px
+					line-height 50px
+					border-right 2px solid #CCE8FE
+					&:hover
+						border-right 2px solid transparent
+						background-color #fff
+		.m-main
+			margin-left 200px
+			padding 20px
+			.box-tit
+				margin-bottom 10px
+				.main
+					padding 10px 0
+					font-size 30px
+					font-weight 700
+					color pink
+				.sub
+					margin-left 20px
+					font-size 20px
+					color lightblue
+					padding 0 10px
+					border none
+					border-radius 3px
+					cursor pointer
+			.box-wrap
+					display flex
+					border 1px solid #cce8fe
+					width 1000px
+					height 300px
+					margin 0 auto
+					border-radius 10px
+					.item
+						$item()
+				&.flex-direction
+					flex-direction rows
+				&.align-items
+					.h150
+						height height+50px
+					.h170
+						height 170px
+					
